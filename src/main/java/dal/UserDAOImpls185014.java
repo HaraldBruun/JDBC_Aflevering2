@@ -9,8 +9,8 @@ import java.util.Arrays;
 import java.util.List;
 
 /*
-Have used and rewritten code from "https://drive.google.com/file/d/1Mu0fsUye_lL5bIuuczq5y88Cd9GbsHyt/view"
-                                   Author chbu, Christian Budtz, DTU
+Have used and rewritten code original from https://drive.google.com/file/d/1Mu0fsUye_lL5bIuuczq5y88Cd9GbsHyt/view
+                                              Author 'chbu', Christian Budtz, DTU
 */
 
 public class UserDAOImpls185014 implements IUserDAO {
@@ -80,16 +80,11 @@ public class UserDAOImpls185014 implements IUserDAO {
         } catch (SQLException e) {
             throw new DALException(e.getMessage());
         }
-
     }
-
-
 
     @Override
     public List<IUserDTO> getUserList() throws DALException {
-
         //No variables here, so no need for a prepared statement
-
         try (Connection c = createConnection()) {
 
             List<IUserDTO> users = new ArrayList<>();
@@ -109,7 +104,6 @@ public class UserDAOImpls185014 implements IUserDAO {
         } catch (SQLException e) {
             throw new DALException(e.getMessage());
         }
-
     }
 
 
@@ -134,7 +128,6 @@ public class UserDAOImpls185014 implements IUserDAO {
         } catch (SQLException e) {
             throw new DALException(e.getMessage());
         }
-
     }
 
     @Override
